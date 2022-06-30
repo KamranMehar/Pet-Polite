@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Home"
+        android:icon="@drawable/ic_home"
+        android:id="@+id/HomeItem"
+        android:iconTint="@color/white"/>
+    <item
+        android:title="Search"
+        android:icon="@drawable/ic_search"
+        android:id="@+id/searchItem"
+        android:iconTint="@color/white"/>
+    <item
+        android:title="Camera"
+        android:icon="@drawable/ic_baseline_camera_alt_24"
+        android:id="@+id/cameraItem"
+        android:iconTint="@color/white"/>
+    <item
+        android:title="Categories"
+        android:icon="@drawable/ic_baseline_view_list_24"
+        android:id="@+id/categoriesItem"
+        android:iconTint="@color/white"/>
+    <item
+        android:title="profile"
+        android:icon="@drawable/ic__person"
+        android:id="@+id/profileItem"
+        android:iconTint="@color/white"/>
+</menu>

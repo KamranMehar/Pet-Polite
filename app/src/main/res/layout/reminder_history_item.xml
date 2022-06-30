@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+    android:backgroundTint="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pet Name: "
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/myBlue"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:id="@+id/petNameHistoryItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="petName"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Massage: "
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/myBlue"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:id="@+id/massageHistoryItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="massage"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time: "
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/myBlue"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:id="@+id/timeHistoryItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DD/MM/YYYY   HH:MM:AM"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

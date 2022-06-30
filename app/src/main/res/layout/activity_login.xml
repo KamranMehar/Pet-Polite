@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sign_up"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Login"
+        android:textColor="@color/myBlue"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/login_dog"
+        android:layout_gravity="center"/>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:hintTextColor="@color/white"
+        style="@style/Theme.AppCompat"
+        app:boxStrokeColor="@color/white"
+        app:startIconDrawable="@drawable/ic_baseline_alternate_email_24"
+        android:textColorHint="@color/white"
+        app:startIconTint="@color/white">
+
+        <EditText
+            android:background="@drawable/custom_button"
+            android:id="@+id/emailEDtLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:backgroundTint="@color/myBlue"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:hintTextColor="@color/white"
+        style="@style/Theme.AppCompat"
+        app:boxStrokeColor="@color/myBlue"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        android:textColorHint="@color/white"
+        app:startIconTint="@color/white">
+
+        <EditText
+            android:background="@drawable/custom_button"
+            android:id="@+id/passwordLoginEDt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:backgroundTint="@color/myBlue"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_margin="10dp"
+        android:id="@+id/LoginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login "
+        android:background="@drawable/custom_button"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:textColor="@color/white">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SignUp"
+        android:textColor="@color/myBlue"
+        android:textSize="15dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:id="@+id/gotoSignupBtn"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue As Guest"
+        android:textColor="@color/myBlue"
+        android:textSize="15dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:id="@+id/loginAsGuestUser"/>
+</LinearLayout>

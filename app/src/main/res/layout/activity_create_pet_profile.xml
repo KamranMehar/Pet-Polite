@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Create_Pet_Profile"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="Pet Profile"
+                android:textColor="@color/myBlue"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/kaushan_script_regular"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/coverPicBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:cropToPadding="false"
+                        android:drawingCacheQuality="high"
+                        android:src="@drawable/ic_baseline_camera_alt_24"
+                        app:backgroundTint="#376A6A6A"
+                        app:borderWidth="0.05dp"
+                        app:elevation="0.5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:id="@+id/coverPic"
+                                android:layout_width="match_parent"
+                                android:layout_height="350dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/cat_cover_pic" />
+
+                    </LinearLayout>
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profilePic"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="250dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pet_profile_image"
+                        app:civ_border_color="#FFFFFF"
+                        app:civ_border_width="2dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/uploadProfileBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbarSize="4dp"
+                        android:src="@drawable/ic_baseline_camera_alt_24"
+                        app:backgroundTint="#85FFFFFF"
+                        app:elevation="0.1dp"
+                        app:fabSize="auto"
+                        app:layout_constraintBottom_toBottomOf="@+id/profilePic"
+                        app:layout_constraintEnd_toEndOf="@+id/profilePic"
+                        app:maxImageSize="24dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:hintTextColor="@color/white"
+                style="@style/Theme.AppCompat"
+                android:textColorHint="@color/white">
+
+                <EditText
+                    android:id="@+id/nameEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button"
+                    android:hint="Name:"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_circle_grey"
+                android:padding="2dp">
+                <TextView
+                    android:paddingStart="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:textColor="@color/myBlue"
+                    android:text="Select Category:"/>
+                <Spinner
+                    android:id="@+id/categoryName"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/myBlue"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:hintTextColor="@color/white"
+                style="@style/Theme.AppCompat"
+                android:textColorHint="@color/white">
+
+                <EditText
+                    android:id="@+id/ageEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button"
+                    android:hint="Age:"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:hintTextColor="@color/white"
+                style="@style/Theme.AppCompat"
+                android:textColorHint="@color/white">
+
+                <EditText
+                    android:id="@+id/breedEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button"
+                    android:hint="Breed Name:"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <EditText
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/custom_button"
+                    android:id="@+id/dateOfBirthEdt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:editable="false"
+                    android:singleLine="true"
+                    android:text="Date Of Birth:"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textAlignment="center"
+                    />
+                <Button
+                    android:background="@drawable/custom_button"
+                    android:id="@+id/calenderBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Calender"
+                    android:textAllCaps="false"/>
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:hintTextColor="@color/white"
+                style="@style/Theme.AppCompat"
+                android:textColorHint="@color/white">
+
+                <EditText
+                    android:id="@+id/genderEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button"
+                    android:hint="Gender:"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:hintTextColor="@color/white"
+                style="@style/Theme.AppCompat"
+                android:textColorHint="@color/white">
+
+                <EditText
+                    android:id="@+id/careNotEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Care Note :"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:background="@drawable/custom_button"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_margin="10dp"
+                android:id="@+id/createProfileBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create"
+                android:background="@drawable/custom_button"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:textColor="@color/white">
+            </androidx.appcompat.widget.AppCompatButton>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

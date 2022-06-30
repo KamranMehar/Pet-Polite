@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Create Pet Profile"
+        android:icon="@drawable/ic_search"
+        android:id="@+id/create_profile_option"
+        android:iconTint="@color/myBlue"/>
+
+    <item
+        android:title="Switch Profile"
+        android:icon="@drawable/switch_account"
+        android:id="@+id/switchAccountID"
+        android:iconTint="@color/myBlue">
+        <menu>
+            <item
+                android:id="@+id/pet_profile_1"
+                android:title="Profile 1" />
+            <item
+                android:id="@+id/pet_profile_2"
+                android:title="profile 2" />
+        </menu>
+    </item>
+    <item
+        android:title="Logout"
+        android:icon="@drawable/ic_baseline_camera_alt_24"
+        android:id="@+id/logout_option"
+        android:iconTint="@color/white"/>
+
+
+</menu>

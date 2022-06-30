@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Pet Polite</string>
+    <string-array name="Category">
+        <item>Select</item>
+        <item>Cats</item>
+        <item>Dogs</item>
+        <item>Fishes</item>
+        <item>Rabbits</item>
+        <item>Reptiles</item>
+        <item>Horses</item>
+        <item>Goats_Sheep</item>
+        <item>Cows_Buffaloes</item>
+        <item>Birds</item>
+    </string-array>
+
+</resources>

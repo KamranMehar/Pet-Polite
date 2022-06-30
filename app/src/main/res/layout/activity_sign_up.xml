@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sign_up"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Sign UP"
+        android:textColor="@color/myBlue"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/kaushan_script_regular"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/signup_cat"
+        android:layout_gravity="center"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:hintTextColor="@color/white"
+        style="@style/Theme.AppCompat"
+        app:boxStrokeColor="@color/white"
+        app:startIconDrawable="@drawable/ic__person"
+        android:textColorHint="@color/white"
+        app:startIconTint="@color/white">
+
+        <EditText
+            android:background="@drawable/custom_button"
+            android:id="@+id/nameEDt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/myBlue"
+            android:hint="Name"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:hintTextColor="@color/white"
+        style="@style/Theme.AppCompat"
+        app:boxStrokeColor="@color/white"
+        app:startIconDrawable="@drawable/ic_baseline_alternate_email_24"
+        android:textColorHint="@color/white"
+        app:startIconTint="@color/white">
+
+        <EditText
+            android:background="@drawable/custom_button"
+            android:id="@+id/emailEDtSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/myBlue"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:hintTextColor="@color/white"
+        style="@style/Theme.AppCompat"
+        app:boxStrokeColor="@color/myBlue"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        android:textColorHint="@color/white"
+        app:startIconTint="@color/white">
+
+        <EditText
+            android:background="@drawable/custom_button"
+            android:id="@+id/setPassSignUpEDt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/myBlue"
+            android:hint="Set Password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:hintTextColor="@color/white"
+        style="@style/Theme.AppCompat"
+        app:boxStrokeColor="@color/myBlue"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        android:textColorHint="@color/white"
+        app:startIconTint="@color/white">
+
+        <EditText
+            android:background="@drawable/custom_button"
+            android:id="@+id/confirmPassEDt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/myBlue"
+            android:hint="confirm Password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/myBlue" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_margin="10dp"
+        android:id="@+id/signuuBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:background="@drawable/custom_button"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:textColor="@color/white">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <TextView
+        android:clickable="true"
+        android:id="@+id/LoginTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="login"
+        android:textColor="@color/myBlue"
+        android:textSize="18sp" />
+
+</LinearLayout>

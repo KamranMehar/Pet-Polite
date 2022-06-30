@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".Create_Category_AdminOnly">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Create Pet Categories"
+                android:textColor="@color/myBlue"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/petImage"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pet_profile_image"
+                app:civ_border_color="@color/myBlue"
+                app:civ_border_width="2dp"/>
+            <Button
+                android:clickable="true"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:id="@+id/browsImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Browse "
+                android:textAllCaps="false"
+                android:background="@drawable/custom_button"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:background="@drawable/round_circle_grey"
+                android:padding="2dp">
+                <TextView
+                    android:paddingStart="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:textColor="@color/dim_text_black"
+                    android:text="Select Category:"/>
+                <Spinner
+                    android:id="@+id/categoryName"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/dim_text_black"
+                    android:textAlignment="center" />
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Breed Name :"
+                android:textColorHint="@color/black">
+
+                <EditText
+                    android:id="@+id/breed_NameEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myBlue"
+                    android:textSize="18sp"
+                    android:backgroundTint="#E3DEDE"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Description :"
+                android:textColorHint="@color/black">
+
+                <EditText
+                    android:backgroundTint="#E3DEDE"
+                    android:id="@+id/descriptionEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myBlue"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Feeding :"
+                android:textColorHint="@color/black">
+
+                <EditText
+                    android:backgroundTint="#E3DEDE"
+                    android:id="@+id/feedingEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myBlue"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Grooming :"
+                android:textColorHint="@color/black">
+
+                <EditText
+                    android:backgroundTint="#E3DEDE"
+                    android:id="@+id/groomingEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myBlue"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Handling:"
+                android:textColorHint="@color/black">
+
+                <EditText
+                    android:backgroundTint="#E3DEDE"
+                    android:id="@+id/handlingEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myBlue"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Housing :"
+                android:textColorHint="@color/black">
+
+                <EditText
+                    android:backgroundTint="#E3DEDE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myBlue"
+                    android:textSize="18sp"
+                    android:id="@+id/housingEdt"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Sleep :"
+                android:textColorHint="@color/black">
+
+                <EditText
+                    android:backgroundTint="#E3DEDE"
+                    android:id="@+id/sleepEDt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myBlue"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:background="@drawable/custom_button"
+                android:clickable="true"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "966961304258",
+    "project_id": "pet-polite-485c5",
+    "storage_bucket": "pet-polite-485c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:966961304258:android:c62a7712a129cd1c7d615b",
+        "android_client_info": {
+          "package_name": "com.example.petpolite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "966961304258-q6b0mnuvnksst9e7a3jj2ffnq9pf12bq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBf0ETiOfowX1K_HnL-K-ahTQ4LaHVuIss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "966961304258-q6b0mnuvnksst9e7a3jj2ffnq9pf12bq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
