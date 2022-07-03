@@ -24,7 +24,8 @@
                   app:iss_delay="0"
                   app:iss_error_image="@drawable/photo"
                   app:iss_period="1000"
-                  app:iss_placeholder="@color/myBlue" />
+                  app:iss_placeholder="@color/myBlue"
+                  android:background="@drawable/bg"/>
               <androidx.recyclerview.widget.RecyclerView
                   android:id="@+id/recyclerView"
                   android:layout_width="match_parent"

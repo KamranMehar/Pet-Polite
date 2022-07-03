@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/BOSS/AndroidStudioProjects/Pet-Polite/app/src/main/res/layout/activity_slider.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/BOSS/AndroidStudioProjects/Pet-Polite/app/src/main/res/layout/fragment_home__posts_.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/kamra/AndroidStudioProjects/PetPolite/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.116" />
         <entry key="..\:/Users/kamra/AndroidStudioProjects/PetPolite/app/src/main/res/drawable/dialog_background.xml" value="0.116" />
         <entry key="..\:/Users/kamra/AndroidStudioProjects/PetPolite/app/src/main/res/drawable/ic_baseline_view_list_24.xml" value="0.116" />
@@ -10,8 +12,6 @@
         <entry key="..\:/Users/kamra/AndroidStudioProjects/PetPolite/app/src/main/res/drawable/ic_search.xml" value="0.1" />
         <entry key="..\:/Users/kamra/AndroidStudioProjects/PetPolite/app/src/main/res/layout/activity_main.xml" value="0.17222222222222222" />
         <entry key="..\:/Users/kamra/AndroidStudioProjects/PetPolite/app/src/main/res/layout/activity_show_post_image.xml" value="0.25" />
-        <entry key="..\:/Users/kamra/AndroidStudioProjects/PetPolite/app/src/main/res/layout/activity_slider.xml" value="0.33" />
-        <entry key="..\:/Users/kamra/AndroidStudioProjects/PetPolite/app/src/main/res/layout/activity_slider_images.xml" value="0.2" />
         <entry key="..\:/Users/kamra/AndroidStudioProjects/PetPolite/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
         <entry key="..\:/Users/kamra/AndroidStudioProjects/PetPolite/app/src/main/res/layout/fragment_categories_.xml" value="0.2" />
         <entry key="..\:/Users/kamra/AndroidStudioProjects/PetPolite/app/src/main/res/layout/fragment_home__posts_.xml" value="0.2" />

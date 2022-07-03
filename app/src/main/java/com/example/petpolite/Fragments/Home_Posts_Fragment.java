@@ -17,6 +17,7 @@ import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.petpolite.Adapters.PostAdapter;
 import com.example.petpolite.Classes.Post_pets;
+import com.example.petpolite.R;
 import com.example.petpolite.databinding.FragmentHomePostsBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -60,13 +61,12 @@ public class Home_Posts_Fragment extends Fragment {
             UserID = user.getUid();
         }
        List<SlideModel> slideModels=new ArrayList<>();
-       slideModels.add(new SlideModel("https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Cute_dog.jpg/1024px-Cute_dog.jpg","Dog",ScaleTypes.CENTER_CROP));
-       slideModels.add(new SlideModel("https://placekitten.com/640/360","Cat",ScaleTypes.CENTER_CROP));
-       slideModels.add(new SlideModel("https://picsum.photos/seed/picsum/200/300","Mountains",ScaleTypes.CENTER_CROP));
-       slideModels.add(new SlideModel("https://picsum.photos/200/300?grayscale","Grayscale",ScaleTypes.CENTER_CROP));
-       slideModels.add(new SlideModel("https://picsum.photos/200/300/?blur","Blur",ScaleTypes.CENTER_CROP));
-       slideModels.add(new SlideModel("https://www.fillmurray.com/640/360","Sketch",ScaleTypes.CENTER_CROP));
-       slideModels.add(new SlideModel("https://loremflickr.com/640/360","View",ScaleTypes.CENTER_CROP));
+        slideModels.add(new SlideModel(R.drawable.community_post_slid,ScaleTypes.CENTER_INSIDE));
+        slideModels.add(new SlideModel(R.drawable.profiles_slide,ScaleTypes.CENTER_INSIDE));
+        slideModels.add(new SlideModel(R.drawable.notification_slide,ScaleTypes.CENTER_INSIDE));
+        slideModels.add(new SlideModel(R.drawable.categories_slide,ScaleTypes.CENTER_INSIDE));
+
+        binding.imageSlider.setImageList(slideModels);
        binding.imageSlider.setImageList(slideModels);
 
         RecyclerView recyclerView = binding.recyclerView;
