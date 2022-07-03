@@ -13,12 +13,10 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.petpolite.Adapters.PostAdapter;
 import com.example.petpolite.Classes.Post_pets;
-import com.example.petpolite.R;
 import com.example.petpolite.databinding.FragmentHomePostsBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;

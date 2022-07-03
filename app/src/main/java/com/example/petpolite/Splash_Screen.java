@@ -8,6 +8,7 @@ import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Handler;
 
+import android.util.Log;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -25,64 +26,69 @@ ActivitySplashScreenBinding binding;
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        binding=ActivitySplashScreenBinding.inflate(getLayoutInflater());
+        binding = ActivitySplashScreenBinding.inflate(getLayoutInflater());
         //Full Screen
-      getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(binding.getRoot());
-        Handler handler=new Handler();
+        SharedPreferences prefs = getSharedPreferences("AppState", MODE_PRIVATE);
+        boolean isSignup = prefs.getBoolean("isSignUp", false);
+        boolean isProfileCreated = prefs.getBoolean("isProfileCreated", false);
+        boolean isGuest = prefs.getBoolean("isGuest", false);
+        boolean isFirstTime = prefs.getBoolean("isFirstTime", false);
+        Log.e("onCreate: ","__________________: "+isFirstTime );
+        if (!isFirstTime) {
+            Intent i = new Intent(Splash_Screen.this, Slider.class);
+            startActivity(i);
+            finish();
+        } else {
+            if (isNetworkConnected()) {
 
-        if (isNetworkConnected()){
-            SharedPreferences prefs = getSharedPreferences("AppState", MODE_PRIVATE);
-            boolean isSignup = prefs.getBoolean("isSignUp", false);
-            boolean isProfileCreated=prefs.getBoolean("isProfileCreated",false);
-            boolean isGuest=prefs.getBoolean("isGuest",false);
-       /* handler.postDelayed(()->{*/
-            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-            Intent intent;
-            if (!isGuest){
-                if (user != null) {
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                Intent intent;
 
-                    if (!isSignup){
-                        intent = new Intent(Splash_Screen.this, Sign_up.class);
-                        startActivity(intent);
-                        finish();
-                    }else if (isSignup && !isProfileCreated){
-                        intent = new Intent(Splash_Screen.this, Create_Pet_Profile.class);
-                        startActivity(intent);
-                        finish();
-                    }else if (isProfileCreated && isSignup){
-                        intent = new Intent(Splash_Screen.this, MainActivity.class);
+                if (!isGuest) {
+                    if (user != null) {
+
+                        if (!isSignup) {
+                            intent = new Intent(Splash_Screen.this, Sign_up.class);
+                            startActivity(intent);
+                            finish();
+                        } else if (isSignup && !isProfileCreated) {
+                            intent = new Intent(Splash_Screen.this, Create_Pet_Profile.class);
+                            startActivity(intent);
+                            finish();
+                        } else if (isProfileCreated && isSignup) {
+                            intent = new Intent(Splash_Screen.this, MainActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }
+
+                    } else {
+                        intent = new Intent(Splash_Screen.this, Login_Activity.class);
                         startActivity(intent);
                         finish();
                     }
-
-                }
-                else {
-                    intent = new Intent(Splash_Screen.this, Login_Activity.class);
+                } else {
+                    intent = new Intent(Splash_Screen.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                 }
-            }else {
-                intent = new Intent(Splash_Screen.this, MainActivity.class);
-                startActivity(intent);
-                finish();
+            } else {
+                DialogShow.showCustomDialogNoInternet("No Internet To run the App", "No Internet", Splash_Screen.this, new ClickedCallback() {
+                    @Override
+                    public void YesClicked() {
+                        finishAffinity();
+                        System.exit(0);
+                    }
+
+                    @Override
+                    public void NoClicked() {
+
+                    }
+                });
             }
-       /* },500);*/
-    }else {
-            DialogShow.showCustomDialogNoInternet("No Internet To run the App", "No Internet", Splash_Screen.this, new ClickedCallback() {
-                @Override
-                public void YesClicked() {
-                    finishAffinity();
-                    System.exit(0);
-                }
-
-                @Override
-                public void NoClicked() {
-
-                }
-            });
         }
-        }
+    }
 
     private  boolean isNetworkConnected() {
         ConnectivityManager cm = (ConnectivityManager)getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);

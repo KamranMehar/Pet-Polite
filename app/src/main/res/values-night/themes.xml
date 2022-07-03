@@ -13,17 +13,25 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
     <style name="CustomAlert" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:windowBackground">@drawable/dialog_background</item>
     </style>
-    <style name="AppSearchView" parent="Widget.AppCompat.SearchView" >
+
+    <style name="AppSearchView" parent="Widget.AppCompat.SearchView">
         <item name="android:editTextColor">@color/myBlue</item>
         <item name="android:textColorHint">@color/dim_text_black</item>
     </style>
+
     <style name="Theme.MyAppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowNoTitle">true</item>
         <item name="android:statusBarColor">@color/myBlue</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+
+    <style name="ThemeOverlay.PetPolite.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_900</item>
+        <item name="fullscreenTextColor">@color/light_blue_A400</item>
     </style>
 </resources>
