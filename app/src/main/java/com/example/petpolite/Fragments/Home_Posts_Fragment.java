@@ -62,9 +62,9 @@ public class Home_Posts_Fragment extends Fragment {
         }
         //updated
        List<SlideModel> slideModels=new ArrayList<>();
-        slideModels.add(new SlideModel(R.drawable.community_post_slid,ScaleTypes.CENTER_INSIDE));
-        slideModels.add(new SlideModel(R.drawable.profiles_slide,ScaleTypes.CENTER_INSIDE));
-        slideModels.add(new SlideModel(R.drawable.notification_slide,ScaleTypes.CENTER_INSIDE));
+        slideModels.add(new SlideModel(R.drawable.community__,ScaleTypes.CENTER_INSIDE));
+        slideModels.add(new SlideModel(R.drawable.category__,ScaleTypes.CENTER_INSIDE));
+        slideModels.add(new SlideModel(R.drawable.notification__,ScaleTypes.CENTER_INSIDE));
         slideModels.add(new SlideModel(R.drawable.categories_slide,ScaleTypes.CENTER_INSIDE));
 
         binding.imageSlider.setImageList(slideModels);
