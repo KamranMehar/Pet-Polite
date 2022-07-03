@@ -29,6 +29,7 @@ ActivitySliderBinding binding;
       //  getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         changeStatusBar();
         List<SlideModel> slideModels=new ArrayList<>();
+        //Not title for sliders
                 slideModels.add(new SlideModel(R.drawable.community_post_slid,ScaleTypes.CENTER_INSIDE));
                 slideModels.add(new SlideModel(R.drawable.profiles_slide,ScaleTypes.CENTER_INSIDE));
                 slideModels.add(new SlideModel(R.drawable.notification_slide,ScaleTypes.CENTER_INSIDE));
