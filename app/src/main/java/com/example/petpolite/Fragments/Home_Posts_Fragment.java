@@ -60,6 +60,7 @@ public class Home_Posts_Fragment extends Fragment {
             assert user != null;
             UserID = user.getUid();
         }
+        //updated
        List<SlideModel> slideModels=new ArrayList<>();
         slideModels.add(new SlideModel(R.drawable.community_post_slid,ScaleTypes.CENTER_INSIDE));
         slideModels.add(new SlideModel(R.drawable.profiles_slide,ScaleTypes.CENTER_INSIDE));
